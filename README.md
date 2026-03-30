@@ -1,5 +1,10 @@
 # VEROQ Cookbook
 
+[![License](https://img.shields.io/badge/license-MIT-2EE89A)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.9+-2EE89A)](https://python.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-2EE89A)](https://typescriptlang.org)
+[![VEROQ](https://img.shields.io/badge/powered%20by-VEROQ-2EE89A)](https://veroq.ai)
+
 Code examples and recipes for building with [VEROQ](https://veroq.ai) — the trust protocol for agentic AI.
 
 ## Quick Start
