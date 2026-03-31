@@ -5,42 +5,96 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-2EE89A)](https://typescriptlang.org)
 [![VEROQ](https://img.shields.io/badge/powered%20by-VEROQ-2EE89A)](https://veroq.ai)
 
-Code examples and recipes for building with [VEROQ](https://veroq.ai) — the trust protocol for agentic AI.
+**60 ready-to-run examples** for building with [VEROQ](https://veroq.ai) — the trust protocol for agentic AI.
 
 ## Quick Start
 
-```python
-from veroq import VeroqClient
-client = VeroqClient()  # uses VEROQ_API_KEY env var
+```bash
+pip install veroq                    # Python
+npm install @veroq/sdk               # TypeScript
+export VEROQ_API_KEY=vq_live_xxx     # free at veroq.ai/pricing
 
-answer = client.ask("How is NVDA doing?")
-print(answer["summary"])
+python examples/ask-anything.py
 ```
 
 ## Examples
 
-| Example | Description | Language |
-|---------|-------------|----------|
-| [ask-anything.py](examples/ask-anything.py) | Ask any financial question | Python |
-| [verify-claim.py](examples/verify-claim.py) | Fact-check with evidence chain | Python |
-| [stream-sse.py](examples/stream-sse.py) | Real-time SSE streaming | Python |
-| [trading-signals.py](examples/trading-signals.py) | Composite trade signals | Python |
-| [ask-anything.ts](examples/ask-anything.ts) | Ask any financial question | TypeScript |
-| [verify-claim.ts](examples/verify-claim.ts) | Fact-check with evidence chain | TypeScript |
-| [stream-sse.ts](examples/stream-sse.ts) | Real-time SSE streaming | TypeScript |
-| [portfolio-monitor.py](examples/portfolio-monitor.py) | Monitor a portfolio | Python |
-| [screener.py](examples/screener.py) | NLP stock screener | Python |
-| [multi-ticker.py](examples/multi-ticker.py) | Compare multiple tickers | Python |
+### Ask & Verify
 
-## Get Started
+| Example | Description | |
+|---------|-------------|--|
+| [ask-anything](examples/ask-anything.py) | Ask any financial question | [py](examples/ask-anything.py) · [ts](examples/ask-anything.ts) |
+| [verify-claim](examples/verify-claim.py) | Fact-check with evidence chain | [py](examples/verify-claim.py) · [ts](examples/verify-claim.ts) |
+| [stream-sse](examples/stream-sse.py) | Real-time SSE streaming | [py](examples/stream-sse.py) · [ts](examples/stream-sse.ts) |
+| [evidence-chain](examples/evidence-chain.py) | Full source provenance | [py](examples/evidence-chain.py) · [ts](examples/evidence-chain.ts) |
+| [confidence-breakdown](examples/confidence-breakdown.py) | Decomposed confidence scores | [py](examples/confidence-breakdown.py) · [ts](examples/confidence-breakdown.ts) |
+| [batch-verify](examples/batch-verify.py) | Verify multiple claims | [py](examples/batch-verify.py) · [ts](examples/batch-verify.ts) |
 
-1. Get a free API key at [veroq.ai/pricing](https://veroq.ai/pricing)
-2. `export VEROQ_API_KEY=vq_live_xxx`
-3. `pip install veroq` or `npm install @veroq/sdk`
+### Trading & Signals
+
+| Example | Description | |
+|---------|-------------|--|
+| [trading-signals](examples/trading-signals.py) | Composite trade signals (0-100) | [py](examples/trading-signals.py) · [ts](examples/trade-signal.ts) |
+| [watchlist-scanner](examples/watchlist-scanner.py) | Scan a watchlist | [py](examples/watchlist-scanner.py) · [ts](examples/watchlist-scanner.ts) |
+| [screener](examples/screener.py) | NLP stock screener | [py](examples/screener.py) |
+| [backtest-strategy](examples/backtest-strategy.py) | Backtest RSI strategy | [py](examples/backtest-strategy.py) · [ts](examples/backtest-strategy.ts) |
+| [correlation-matrix](examples/correlation-matrix.py) | How tickers move together | [py](examples/correlation-matrix.py) · [ts](examples/correlation-matrix.ts) |
+| [bull-bear-debate](examples/bull-bear-debate.py) | Bull vs bear for any stock | [py](examples/bull-bear-debate.py) |
+
+### Market Data
+
+| Example | Description | |
+|---------|-------------|--|
+| [market-movers](examples/market-movers.py) | Biggest gainers and losers | [py](examples/market-movers.py) · [ts](examples/market-movers.ts) |
+| [earnings-calendar](examples/earnings-calendar.py) | Who reports this week | [py](examples/earnings-calendar.py) · [ts](examples/earnings-calendar.ts) |
+| [insider-trades](examples/insider-trades.py) | SEC Form 4 insider activity | [py](examples/insider-trades.py) · [ts](examples/insider-trades.ts) |
+| [analyst-ratings](examples/analyst-ratings.py) | Consensus + price targets | [py](examples/analyst-ratings.py) · [ts](examples/analyst-ratings.ts) |
+| [competitors](examples/competitors.py) | Company competitors | [py](examples/competitors.py) · [ts](examples/competitors.ts) |
+| [financials](examples/financials.py) | Revenue, margins, P/E | [py](examples/financials.py) · [ts](examples/financials.ts) |
+| [sector-scan](examples/sector-scan.py) | Scan an entire sector | [py](examples/sector-scan.py) · [ts](examples/sector-scan.ts) |
+
+### Crypto, Forex & Economy
+
+| Example | Description | |
+|---------|-------------|--|
+| [crypto-prices](examples/crypto-prices.py) | Top crypto + 24h changes | [py](examples/crypto-prices.py) · [ts](examples/crypto-prices.ts) |
+| [defi-overview](examples/defi-overview.py) | DeFi TVL and protocols | [py](examples/defi-overview.py) |
+| [forex-rates](examples/forex-rates.py) | Major forex pairs | [py](examples/forex-rates.py) · [ts](examples/forex-rates.ts) |
+| [commodity-prices](examples/commodity-prices.py) | Gold, oil, silver | [py](examples/commodity-prices.py) |
+| [treasury-yields](examples/treasury-yields.py) | US yield curve | [py](examples/treasury-yields.py) |
+
+### Portfolio & Monitoring
+
+| Example | Description | |
+|---------|-------------|--|
+| [portfolio-monitor](examples/portfolio-monitor.py) | Monitor portfolio tickers | [py](examples/portfolio-monitor.py) |
+| [multi-ticker](examples/multi-ticker.py) | Compare multiple tickers | [py](examples/multi-ticker.py) |
+| [morning-brief](examples/morning-brief.py) | Daily market briefing | [py](examples/morning-brief.py) · [ts](examples/morning-brief.ts) |
+| [stream-portfolio](examples/stream-portfolio.ts) | SSE streaming for portfolio | [ts](examples/stream-portfolio.ts) |
+| [full-analysis](examples/full-analysis.ts) | Cross-reference streamed | [ts](examples/full-analysis.ts) |
+| [news-search](examples/news-search.ts) | Search financial news | [ts](examples/news-search.ts) |
+
+### Integrations
+
+| Example | What it does |
+|---------|-------------|
+| [langchain-agent](examples/langchain-agent.py) | LangChain agent with VEROQ tools |
+| [crewai-team](examples/crewai-team.py) | CrewAI multi-agent team |
+| [discord-bot](examples/discord-bot.py) | Discord bot (!ask, !verify) |
+| [slack-bot](examples/slack-bot.py) | Slack bot (/ask, /verify) |
+| [telegram-webhook](examples/telegram-webhook.py) | Telegram bot |
+| [csv-export](examples/csv-export.py) | Export screener to CSV |
+| [scheduled-report](examples/scheduled-report.py) | Daily email reports |
+| [risk-dashboard](examples/risk-dashboard.py) | Real-time risk monitoring |
+| [news-digest](examples/news-digest.py) | Daily news digest by topic |
+| [alert-system](examples/alert-system.py) | Price alerts with webhooks |
 
 ## Links
 
-- [API Documentation](https://veroq.ai/docs)
-- [API Reference](https://veroq.ai/api-reference)
+- [VEROQ](https://veroq.ai) — Interactive demos
+- [API Reference](https://veroq.ai/api-reference) — 300+ endpoints
 - [Python SDK](https://github.com/Veroq-api/veroq-python)
 - [TypeScript SDK](https://github.com/Veroq-api/veroq-js)
+- [MCP Server](https://github.com/Veroq-api/veroq-mcp)
+
+Free tier: 1,000 credits/month. No credit card.
